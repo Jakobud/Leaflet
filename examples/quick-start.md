@@ -54,9 +54,11 @@ Next we'll add a tile layer to add to our map, in this case it's a Mapbox Street
 <pre><code class="javascript">L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &amp;copy; <span class="text-cut" data-cut="[&hellip;]">&lt;a href="http://openstreetmap.org"&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href="http://creativecommons.org/licenses/by-sa/2.0/"&gt;CC-BY-SA&lt;/a&gt;, Imagery &copy; &lt;a href="http://mapbox.com"&gt;Mapbox&lt;/a&gt;</span>',
 	maxZoom: 18,
-	id: '<a href="https://www.mapbox.com/projects/">your.mapbox.project.id</a>',
-	accessToken: '<a href="https://www.mapbox.com/account/apps/">your.mapbox.public.access.token</a>'
+	id: '<a href="https://www.mapbox.com/api-documentation/#maps">map_id</a>',
+	accessToken: '<a href="https://www.mapbox.com/studio/account/tokens/">your_mapbox_default_public_token</a>'
 }).addTo(mymap);</code></pre>
+
+In order to add Mapbox tiles to your project, you will need to specify a Mapbox [map_id](https://www.mapbox.com/api-documentation/#maps) (such as `mapbox.streets`, `mapbox.satellite`, etc) as well as an API access token that you can get when you [sign up for an account](https://www.mapbox.com/studio/signup/).
 
 Make sure all the code is called after the `div` and `leaflet.js` inclusion. That's it! You have a working Leaflet map now.
 
